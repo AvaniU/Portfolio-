@@ -431,3 +431,220 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* CHATBOT STYLES */
+
+.chatbot {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.chatbot-blue {
+  background-color: var(--blue-100);
+  border-radius: 10px;
+  border: 2px solid rgb(163, 163, 163); /* Black border with thickness */
+  padding: 30px;
+  gap: 30px;
+  display: flex;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.chatbot-blue p {
+  margin-bottom: 30px;
+}
+
+.chat-info {
+  flex: 3;
+  padding-right: 30px;
+}
+
+.chat-box {
+  flex: 4;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid rgb(163, 163, 163); /* Black border with thickness */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Hide overflow to ensure scrollbar appears inside the box */
+}
+
+.scroll-area {
+  flex: 1; /* Allow it to take up available space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 300px; /* Maximum height for the scroll area */
+}
+
+.scroll-area ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.scroll-area li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.avatarbot,
+.avataruser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #d3d3d3;
+  color: black;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.avatarbot {
+  width: 40px;
+  height: 40px;
+  background-color: #d0d0d0; /* Slightly different grey for the bot */
+}
+
+.avataruser {
+  width: 40px;
+  height: 40px;
+  background-color: #d0d0d0; /* Slightly different grey for the user */
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.message span {
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 0.875rem;
+}
+
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.input-area button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background-color: #0056b3;
+}
+
+/* CHAT MESSAGE STYLES */
+
+.chat-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-message input {
+  flex: 1;
+  border: none; /* Remove border */
+  border-radius: 50px; /* Pill-shaped */
+  background-color: #f0f0f0; /* Grey background */
+  padding: 10px 20px; /* Padding inside the input */
+  font-size: 1rem;
+  color: #000; /* Text color */
+  outline: none; /* Remove default focus outline */
+  position: relative; /* To position the underline effect */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.chat-message input::placeholder {
+  color: #000; /* Black placeholder text */
+  opacity: 1; /* Ensure placeholder text is fully opaque */
+  transition: color 0.3s; /* Smooth transition for placeholder color */
+}
+
+.chat-message input:hover::placeholder,
+.chat-message input:focus::placeholder {
+  color: #fff; /* White placeholder text on hover/focus */
+}
+
+.chat-message input:hover,
+.chat-message input:focus {
+  background-color: #e0e0e0; /* Lighter grey on hover/focus */
+}
+
+.chat-message input:hover::after,
+.chat-message input:focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000; /* Underline color */
+}
+
+.chat-message button {
+  background-color: rgb(22, 14, 163);
+  color: white;
+  border: none;
+  border-radius: 50px; /* Match pill shape */
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.chat-message button:hover {
+  background-color: #e0e0e0;
+  color: white;
+  border: none;
+  border-radius: 50px; /* Match pill shape */
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+/* BUTTON STYLES */
+
+.container{
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; 
+  font-size: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: dotted;
+}
+
+.container:hover {
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  background-color: #e0e0e0; /* Grey background on hover */
+  color: #000; /* Black text color on hover */
+}
+
+
+
+
